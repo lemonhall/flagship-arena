@@ -20,7 +20,13 @@ fs.mkdirSync(OUT, { recursive: true });
 
 const browser = await chromium.connectOverCDP(ENDPOINT);
 try {
-  const page = await browser.contexts()[0].newPage();
+  // --english runs in a fresh, signed-out context with an English locale, which is how the
+  // storefront audience arrives: the game picks its language from navigator.language.
+  const english = process.argv.includes('--english');
+  const context = english
+    ? await browser.newContext({ locale: 'en-US', viewport: { width: 1440, height: 900 } })
+    : browser.contexts()[0];
+  const page = await context.newPage();
   const failures = [];
   page.on('response', response => { if (response.status() >= 400) failures.push(`${response.status()} ${response.url()}`); });
   page.on('pageerror', error => failures.push(`pageerror: ${error.message}`));
