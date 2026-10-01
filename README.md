@@ -84,10 +84,13 @@ node tools/pack-assets.mjs
 
 原始导出位于忽略的 `.cache/godot-exports`。提交的 `public` 已包含可直接运行的压缩资产；仅开发时重新导出才需要 Godot。
 
-BGM 为用户提供的《让我们荡起双桨（重金属）》，原文件来自 `E:\CloudMusic\Suno.ai - 让我们荡起双桨（重金属）.mp3`，原样复制为 `public/audio/flagship_arena_bgm.mp3`（约 172 秒、4.92 MiB）。
+> 本仓库已于 2026-10-01 从 `blender-tests` 独立出来。上面两条命令里的 `godot_world_voyage` 目录与 `tools/export_flagship_web_assets.gd` 都在父仓库 `blender-tests` 中，只有重新导出船模资产时才需要回去执行；日常开发、测试与发布都在本仓库内完成。
+
+BGM 是 `public/audio/six_seas_bgm.mp3`：**Pirate Indenture**（Eldritch Grim），取自 [OpenGameArt](https://opengameart.org/content/pirate-indenture)，**CC0 1.0 公有领域奉献**——可自由使用、修改与再分发，且无需署名。原曲 38 秒，本项目用 ffmpeg 循环 5 次拼成约 190 秒（CC0 明确允许修改），128 kbps MP3、2.9 MiB。先前的《让我们荡起双桨（重金属）》是仍在版权保护期内的改编曲，已移除，避免公开分发风险。
 
 ## 结构与部署
 
+- `src/i18n.js`：中英双语与语言检测。语言按 `?lang=` → `localStorage` → `navigator.language` 解析，英文优先；数据表与 DOM 更新用内联 `L(zh, en)`，固定标记用 `data-i18n`。
 - `src/catalog.js`：关卡、船炮与周目倍率。
 - `src/progression.js`：本地存档、旧版迁移、零件奖励和永久强化。
 - `src/upgrades.js`：波间候选与实际武器改装。

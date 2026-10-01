@@ -9,7 +9,7 @@ export class BattleAudio {
     try { this.bgmEnabled = localStorage.getItem('flagship-bgm-enabled') !== 'false'; } catch { /* optional persistence */ }
     this.activated = false;
     this.bgmVolume = this.readVolume();
-    this.bgm = new Audio(`${import.meta.env.BASE_URL}audio/flagship_arena_bgm.mp3`);
+    this.bgm = new Audio(`${import.meta.env.BASE_URL}audio/six_seas_bgm.mp3`);
     this.bgm.id = 'bgm-track';
     this.bgm.loop = true;
     this.bgm.preload = 'metadata';
