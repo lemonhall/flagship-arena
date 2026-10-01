@@ -1,8 +1,10 @@
+import { L } from './i18n.js';
+
 const integer = (v, min, max) => Number.isFinite(Number(v)) ? Math.max(min, Math.min(max, Math.trunc(Number(v)))) : min;
 export const TRAINING = {
-  gunnery: { name: '火炮工坊', description: '每级永久火力 +10%', costs: [12, 22, 36] },
-  hull: { name: '船壳加固', description: '每级永久船体 +8%', costs: [12, 22, 36] },
-  handling: { name: '操舵训练', description: '每级航速 +4% · 冲刺冷却 -10%', costs: [12, 22, 36] },
+  gunnery: { name: L('火炮工坊', 'Gunnery Workshop'), description: L('每级永久火力 +10%', '+10% permanent firepower per level'), costs: [12, 22, 36] },
+  hull: { name: L('船壳加固', 'Hull Reinforcement'), description: L('每级永久船体 +8%', '+8% permanent hull per level'), costs: [12, 22, 36] },
+  handling: { name: L('操舵训练', 'Helm Training'), description: L('每级航速 +4% · 冲刺冷却 -10%', '+4% speed and -10% boost cooldown per level'), costs: [12, 22, 36] },
 };
 const income = p => p.migrationGrant + Object.values(p.rewards).reduce((sum, n) => sum + n, 0);
 const spent = p => Object.entries(TRAINING).reduce((sum, [key, track]) => sum + track.costs.slice(0, p.training[key]).reduce((a, b) => a + b, 0), 0);

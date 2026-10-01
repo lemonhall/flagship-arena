@@ -1,12 +1,14 @@
+import { L } from './i18n.js';
+
 export const UPGRADES = {
-  battery: { name: '扩充炮架', description: '每轮增加 2 门炮，逐门轰出更长排射。', tag: '排射', max: 1 },
-  loader: { name: '熟练装填', description: '装填时间减少 20%，更快打出下一轮。', tag: '速射', max: 2 },
-  heated: { name: '烧红铁弹', description: '命中点燃敌舰，持续 4 秒灼烧。', tag: '燃烧', max: 1 },
-  chain: { name: '火药殉爆', description: '燃烧的敌舰沉没时爆炸，伤害周围敌舰。', tag: '连爆', max: 1, requires: 'heated' },
-  counter: { name: '冲刺反击', description: '冲刺后 3 秒内的下一轮排射伤害 +60%。', tag: '反击', max: 1 },
-  powder: { name: '精制火药', description: '炮弹伤害增加 22%。', tag: '火力', max: 2 },
-  hull: { name: '战地加固', description: '船体上限 +65，并立即修复 100 船体。', tag: '生存', max: 2 },
-  payload: { name: '扩散装药', description: '散弹增加 2 颗；臼炮爆炸半径增加 7 米。', tag: '覆盖', max: 2, guns: ['grapeshot', 'mortar'] },
+  battery: { name: L('扩充炮架', 'Extended Battery'), description: L('每轮增加 2 门炮，逐门轰出更长排射。', '+2 barrels per volley for a longer broadside.'), tag: L('排射', 'BARRAGE'), max: 1 },
+  loader: { name: L('熟练装填', 'Drilled Crew'), description: L('装填时间减少 20%，更快打出下一轮。', 'Reload time -20%, so the next volley comes sooner.'), tag: L('速射', 'RAPID'), max: 2 },
+  heated: { name: L('烧红铁弹', 'Heated Shot'), description: L('命中点燃敌舰，持续 4 秒灼烧。', 'Hits set the enemy alight, burning for 4 seconds.'), tag: L('燃烧', 'FIRE'), max: 1 },
+  chain: { name: L('火药殉爆', 'Powder Detonation'), description: L('燃烧的敌舰沉没时爆炸，伤害周围敌舰。', 'Burning ships explode as they sink, damaging their neighbours.'), tag: L('连爆', 'CHAIN'), max: 1, requires: 'heated' },
+  counter: { name: L('冲刺反击', 'Counter Charge'), description: L('冲刺后 3 秒内的下一轮排射伤害 +60%。', 'The next broadside within 3s of a boost deals +60% damage.'), tag: L('反击', 'COUNTER'), max: 1 },
+  powder: { name: L('精制火药', 'Refined Powder'), description: L('炮弹伤害增加 22%。', 'Shell damage +22%.'), tag: L('火力', 'POWER'), max: 2 },
+  hull: { name: L('战地加固', 'Field Reinforcement'), description: L('船体上限 +65，并立即修复 100 船体。', '+65 max hull, and 100 hull repaired at once.'), tag: L('生存', 'SURVIVAL'), max: 2 },
+  payload: { name: L('扩散装药', 'Dispersal Charge'), description: L('散弹增加 2 颗；臼炮爆炸半径增加 7 米。', '+2 grapeshot pellets; mortar blast radius +7 m.'), tag: L('覆盖', 'SPREAD'), max: 2, guns: ['grapeshot', 'mortar'] },
 };
 export function offerUpgrades(levels, gun, rng, count) {
   const pool = Object.keys(UPGRADES).filter(id => {

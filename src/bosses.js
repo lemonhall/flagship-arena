@@ -1,12 +1,16 @@
 import { add, mul, norm, toward, distance, wrap, clamp, forward } from './geometry.js';
+import { L } from './i18n.js';
 
 export const BOSS_PATTERNS = [
   ['barrage', 'mortar'], ['mortar', 'sweep'], ['charge', 'barrage'],
   ['sweep', 'mortar', 'barrage'], ['charge', 'encircle', 'sweep'], ['encircle', 'sweep', 'charge', 'mortar'],
 ];
 export const BOSS_LABELS = {
-  barrage: '扇形封锁 · 转舵冲出红线', mortar: '预判曲射 · 改变航向', charge: '巨舰冲撞 · 横向冲刺',
-  sweep: '横扫排射 · 穿过炮火间隙', encircle: '包夹轰炸 · 从缺口突围',
+  barrage: L('扇形封锁 · 转舵冲出红线', 'Fan barrage · turn hard out of the red line'),
+  mortar: L('预判曲射 · 改变航向', 'Leading mortar · change heading'),
+  charge: L('巨舰冲撞 · 横向冲刺', 'Ram · boost sideways'),
+  sweep: L('横扫排射 · 穿过炮火间隙', 'Sweeping broadside · slip through the gaps'),
+  encircle: L('包夹轰炸 · 从缺口突围', 'Encirclement · break out through the opening'),
 };
 export const bossScale = stage => 2.6 + stage * .18;
 const rotate = (v, a) => ({ x: v.x * Math.cos(a) - v.y * Math.sin(a), y: v.x * Math.sin(a) + v.y * Math.cos(a) });

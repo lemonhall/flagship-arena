@@ -10,53 +10,53 @@
   <title>旗舰突击 · 六海征途</title>
 </head>
 <body>
-  <canvas id="battle" tabindex="-1" aria-label="第三人称海战画面"></canvas>
+  <canvas id="battle" tabindex="-1" data-i18n-aria="canvas.aria" aria-label="第三人称海战画面"></canvas>
   <main id="app">
     <section id="menu" class="menu">
-      <header class="brand"><img src="/icon.svg" alt="" /><div><b>旗舰突击</b><span>FLAGSHIP / SIX SEAS</span></div><small>单机航路 · 01</small></header>
+      <header class="brand"><img src="/icon.svg" alt="" /><div><b data-i18n="brand.name">旗舰突击</b><span data-i18n="brand.sub">FLAGSHIP / SIX SEAS</span></div><small data-i18n="brand.tag">单机航路 · 01</small></header>
       <div class="menu-content">
-        <div class="intro"><span class="eyebrow">掌舵、排射、破浪而行</span><h1>六片海域。<br />一艘你的旗舰。</h1><p>两艘友舰伴航，敌军接踵而至。<br />击败海盗首领，把下一艘战舰收入船坞。</p></div>
+        <div class="intro"><span class="eyebrow" data-i18n="intro.eyebrow">掌舵、排射、破浪而行</span><h1 data-i18n-html="intro.title">六片海域。<br />一艘你的旗舰。</h1><p data-i18n-html="intro.body">两艘友舰伴航，敌军接踵而至。<br />击败海盗首领，把下一艘战舰收入船坞。</p></div>
         <div class="voyage-panel">
-          <div class="section-line"><h2>选择航路</h2><span id="progress-label">已征服 0 / 6</span></div>
-          <div class="voyage-strip" id="voyage-strip" hidden><select id="voyage" aria-label="选择周目"></select><button id="new-voyage">开启下一周目 ↗</button></div>
-          <div id="stages" class="stages" aria-label="六关航路"></div>
+          <div class="section-line"><h2 data-i18n="voyage.heading">选择航路</h2><span id="progress-label" data-i18n="voyage.progress">已征服 0 / 6</span></div>
+          <div class="voyage-strip" id="voyage-strip" hidden><select id="voyage" data-i18n-aria="voyage.selectAria" aria-label="选择周目"></select><button id="new-voyage" data-i18n="voyage.next">开启下一周目 ↗</button></div>
+          <div id="stages" class="stages" data-i18n-aria="voyage.stagesAria" aria-label="六关航路"></div>
           <div class="loadout">
-            <label>你的旗舰<select id="hull" aria-label="选择旗舰"></select></label>
-            <label>主力火炮<select id="gun" aria-label="选择火炮"></select></label>
+            <label><span data-i18n="loadout.hull">你的旗舰</span><select id="hull" data-i18n-aria="loadout.hullAria" aria-label="选择旗舰"></select></label>
+            <label><span data-i18n="loadout.gun">主力火炮</span><select id="gun" data-i18n-aria="loadout.gunAria" aria-label="选择火炮"></select></label>
           </div>
-          <div class="dock-strip"><span>改装零件 <b id="menu-parts">0</b></span><button id="shipyard">船坞强化 ↗</button></div>
-          <div class="bgm-control" aria-label="背景音乐控制"><button data-bgm-toggle aria-label="切换背景音乐">BGM 开</button><input id="menu-bgm-volume" data-bgm-volume type="range" min="0" max="1" step="0.05" value="0.6" aria-label="背景音乐音量" /><output data-bgm-value for="menu-bgm-volume">60%</output></div>
-          <div class="departure"><div><strong id="stage-name">翡翠浅滩</strong><small id="stage-detail">3 波敌舰 + 首领战</small></div><button id="start" class="primary">起航 <span>↗</span></button></div>
+          <div class="dock-strip"><span><span data-i18n="dock.parts">改装零件</span> <b id="menu-parts">0</b></span><button id="shipyard" data-i18n="dock.upgrade">船坞强化 ↗</button></div>
+          <div class="bgm-control" data-i18n-aria="bgm.controlsAria" aria-label="背景音乐控制"><button data-bgm-toggle data-i18n="bgm.on" data-i18n-aria="bgm.toggleAria" aria-label="切换背景音乐">BGM 开</button><input id="menu-bgm-volume" data-bgm-volume type="range" min="0" max="1" step="0.05" value="0.6" data-i18n-aria="bgm.volumeAria" aria-label="背景音乐音量" /><output data-bgm-value for="menu-bgm-volume">60%</output></div>
+          <div class="departure"><div><strong id="stage-name" data-i18n="depart.stageName">翡翠浅滩</strong><small id="stage-detail" data-i18n="depart.stageDetail">3 波敌舰 + 首领战</small></div><button id="start" class="primary"><span data-i18n="depart.start">起航</span> <span>↗</span></button></div>
           <p id="loadout-info" class="fineprint"></p>
           <p id="save-status" class="save-status" hidden></p>
         </div>
       </div>
-      <footer class="menu-footer"><span>WASD 掌舵 / 空格排射 / Shift 冲刺 / Q 换目标</span><span>手机：左手掌舵 · 右手开炮</span></footer>
+      <footer class="menu-footer"><span data-i18n="menu.keys">WASD 掌舵 / 空格排射 / Shift 冲刺 / Q 换目标</span><span data-i18n="menu.touch">手机：左手掌舵 · 右手开炮</span></footer>
     </section>
-    <section id="hud" hidden aria-label="战斗信息">
-      <div class="battle-brand"><img src="/icon.svg" alt="" /><span>旗舰突击</span></div>
+    <section id="hud" hidden data-i18n-aria="hud.aria" aria-label="战斗信息">
+      <div class="battle-brand"><img src="/icon.svg" alt="" /><span data-i18n="hud.brand">旗舰突击</span></div>
       <div class="mission"><span id="stage-title"></span><strong id="wave-label"></strong><small id="counts"></small></div>
-      <div class="toolbar"><button id="music" aria-label="打开背景音乐设置">BGM</button><button id="sound" aria-label="切换音效">音效 开</button><button id="pause" aria-label="暂停">Ⅱ</button><button id="fullscreen" aria-label="全屏">⛶</button></div>
-      <div class="vitals"><div><span>船体</span><b id="hp-text"></b></div><div class="bar"><i id="hp-bar"></i></div><div><span>炮弹</span><b id="ammo-text"></b></div><div class="bar ammo"><i id="ammo-bar"></i></div></div>
+      <div class="toolbar"><button id="music" data-i18n-aria="hud.bgmAria" aria-label="打开背景音乐设置">BGM</button><button id="sound" data-i18n="hud.soundOn" data-i18n-aria="hud.soundAria" aria-label="切换音效">音效 开</button><button id="pause" data-i18n-aria="hud.pauseAria" aria-label="暂停">Ⅱ</button><button id="fullscreen" data-i18n-aria="hud.fullscreenAria" aria-label="全屏">⛶</button></div>
+      <div class="vitals"><div><span data-i18n="hud.hull">船体</span><b id="hp-text"></b></div><div class="bar"><i id="hp-bar"></i></div><div><span data-i18n="hud.ammo">炮弹</span><b id="ammo-text"></b></div><div class="bar ammo"><i id="ammo-bar"></i></div></div>
       <div id="boss-hud" class="boss-hud" hidden><span id="boss-name"></span><div class="bar"><i id="boss-bar"></i></div><small id="boss-action"></small></div>
-      <canvas id="radar" width="240" height="240" aria-label="战场雷达"></canvas>
+      <canvas id="radar" width="240" height="240" data-i18n-aria="hud.radarAria" aria-label="战场雷达"></canvas>
       <div id="ship-labels"></div>
       <div id="toast" role="status"></div>
       <div id="damage-flash" aria-hidden="true"></div>
       <div id="danger-warning" role="status" hidden></div>
       <div id="build-status" class="build-status"></div>
       <div class="aim-status" id="aim-status"></div>
-      <div class="joystick" id="stick" aria-label="航行摇杆"><span>掌舵</span><i></i></div>
-      <button id="target" class="target-button">换目标 <small>Q</small></button>
-      <button id="boost" class="boost-button">冲刺 <small>SHIFT</small></button>
-      <button id="fire" class="fire-button"><span>排射</span><small id="reload">按住开炮</small></button>
-      <p class="battle-hint">让侧舷朝向敌舰 · 驶近木桶修船、炮弹箱补弹</p>
+      <div class="joystick" id="stick" data-i18n-aria="hud.stickAria" aria-label="航行摇杆"><span data-i18n="hud.stick">掌舵</span><i></i></div>
+      <button id="target" class="target-button"><span data-i18n="hud.target">换目标</span> <small>Q</small></button>
+      <button id="boost" class="boost-button"><span data-i18n="hud.boost">冲刺</span> <small>SHIFT</small></button>
+      <button id="fire" class="fire-button"><span data-i18n="hud.fire">排射</span><small id="reload" data-i18n="hud.fireHint">按住开炮</small></button>
+      <p class="battle-hint" data-i18n="hud.hint">让侧舷朝向敌舰 · 驶近木桶修船、炮弹箱补弹</p>
     </section>
-    <section id="upgrade-menu" class="overlay" hidden tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="upgrade-title"><div class="modal upgrade-modal"><div class="upgrade-heading"><button id="upgrade-leave" aria-label="收拢战利品并结束本次出航">← 返回航路</button><span class="eyebrow">战场已暂停 · 本关改装</span></div><h2 id="upgrade-title">火力，开始成型</h2><p id="upgrade-detail"></p><div id="upgrade-options" class="upgrade-options"></div><p class="upgrade-note">三选一 · 临时改装本关有效，船坞强化永久保留</p><p class="release-hint">松开手指，稍候选择改装</p></div></section>
-    <section id="shipyard-menu" class="overlay" hidden role="dialog" aria-modal="true" aria-labelledby="shipyard-title"><div class="modal shipyard-modal"><span class="eyebrow">每次出航，都能更强</span><h2 id="shipyard-title">船坞强化</h2><p>可用零件 <strong id="parts-balance">0</strong> · 战败也保留已获得的零件</p><div id="training-options"></div><p class="upgrade-note">进度仅保存在此浏览器。分享网址不会分享你的存档。</p><button id="shipyard-close" class="primary">整备完毕 · 返回航路</button></div></section>
-    <section id="loading" class="overlay" hidden><div class="modal"><span class="eyebrow">整备舰队</span><h2 id="loading-title">船员就位中</h2><div class="bar"><i id="loading-bar"></i></div><p id="loading-detail">正在装载战舰</p><button id="load-retry" hidden class="primary">重新装载</button><button id="load-back" hidden>返回航路</button></div></section>
-    <section id="pause-menu" class="overlay" hidden><div class="modal"><span class="eyebrow">暂时抛锚</span><h2>海风会等你</h2><p>战斗已暂停</p><div class="bgm-control" aria-label="背景音乐控制"><button id="bgm-toggle" data-bgm-toggle aria-label="切换背景音乐">BGM 开</button><input id="bgm-volume" data-bgm-volume type="range" min="0" max="1" step="0.05" value="0.6" aria-label="背景音乐音量" /><output id="bgm-value" data-bgm-value for="bgm-volume">60%</output></div><button id="resume" class="primary">继续航行</button><button id="leave">返回航路</button></div></section>
-    <section id="result" class="overlay" hidden><div class="modal result-card"><span class="eyebrow" id="result-eyebrow">航路战报</span><h2 id="result-title"></h2><p id="result-detail"></p><div id="reward" class="reward"></div><button id="next" class="primary"></button><button id="back">返回航路 · 整备船炮</button></div></section>
+    <section id="upgrade-menu" class="overlay" hidden tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="upgrade-title"><div class="modal upgrade-modal"><div class="upgrade-heading"><button id="upgrade-leave" data-i18n="upgrade.back" data-i18n-aria="upgrade.backAria" aria-label="收拢战利品并结束本次出航">← 返回航路</button><span class="eyebrow" data-i18n="upgrade.eyebrow">战场已暂停 · 本关改装</span></div><h2 id="upgrade-title" data-i18n="upgrade.title">火力，开始成型</h2><p id="upgrade-detail"></p><div id="upgrade-options" class="upgrade-options"></div><p class="upgrade-note" data-i18n="upgrade.note">三选一 · 临时改装本关有效，船坞强化永久保留</p><p class="release-hint" data-i18n="upgrade.release">松开手指，稍候选择改装</p></div></section>
+    <section id="shipyard-menu" class="overlay" hidden role="dialog" aria-modal="true" aria-labelledby="shipyard-title"><div class="modal shipyard-modal"><span class="eyebrow" data-i18n="shipyard.eyebrow">每次出航，都能更强</span><h2 id="shipyard-title" data-i18n="shipyard.title">船坞强化</h2><p><span data-i18n="dock.balance">可用零件</span> <strong id="parts-balance">0</strong> <span data-i18n="dock.keepOnDefeat">· 战败也保留已获得的零件</span></p><div id="training-options"></div><p class="upgrade-note" data-i18n="shipyard.note">进度仅保存在此浏览器。分享网址不会分享你的存档。</p><button id="shipyard-close" class="primary" data-i18n="shipyard.close">整备完毕 · 返回航路</button></div></section>
+    <section id="loading" class="overlay" hidden><div class="modal"><span class="eyebrow" data-i18n="loading.eyebrow">整备舰队</span><h2 id="loading-title" data-i18n="loading.title">船员就位中</h2><div class="bar"><i id="loading-bar"></i></div><p id="loading-detail" data-i18n="loading.detail">正在装载战舰</p><button id="load-retry" hidden class="primary" data-i18n="loading.retry">重新装载</button><button id="load-back" hidden data-i18n="loading.back">返回航路</button></div></section>
+    <section id="pause-menu" class="overlay" hidden><div class="modal"><span class="eyebrow" data-i18n="pause.eyebrow">暂时抛锚</span><h2 data-i18n="pause.title">海风会等你</h2><p data-i18n="pause.body">战斗已暂停</p><div class="bgm-control" data-i18n-aria="bgm.controlsAria" aria-label="背景音乐控制"><button id="bgm-toggle" data-bgm-toggle data-i18n="bgm.on" data-i18n-aria="bgm.toggleAria" aria-label="切换背景音乐">BGM 开</button><input id="bgm-volume" data-bgm-volume type="range" min="0" max="1" step="0.05" value="0.6" data-i18n-aria="bgm.volumeAria" aria-label="背景音乐音量" /><output id="bgm-value" data-bgm-value for="bgm-volume">60%</output></div><button id="resume" class="primary" data-i18n="pause.resume">继续航行</button><button id="leave" data-i18n="pause.leave">返回航路</button></div></section>
+    <section id="result" class="overlay" hidden><div class="modal result-card"><span class="eyebrow" id="result-eyebrow" data-i18n="result.eyebrow">航路战报</span><h2 id="result-title"></h2><p id="result-detail"></p><div id="reward" class="reward"></div><button id="next" class="primary"></button><button id="back" data-i18n="result.back">返回航路 · 整备船炮</button></div></section>
   </main>
   <script type="module" src="/src/main.js"></script>
 </body>

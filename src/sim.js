@@ -262,7 +262,7 @@ export class ArenaSim {
     if (u.hp > 0) return;
     u.volley = null; this.score[1 - u.team]++;
     this.emit('sunk', { id: u.id, generation: u.generation, pos: { ...u.pos }, team: u.team, boss: u.boss });
-    if (u.player) { this.deathCause = source === 'storm' ? '风暴' : this.unit(source)?.boss ? '首领重击' : '敌舰炮击'; this.finish('defeat'); return; }
+    if (u.player) { this.deathCause = source === 'storm' ? 'storm' : this.unit(source)?.boss ? 'boss' : 'shell'; this.finish('defeat'); return; }
     if (u.team === 1) {
       this.loot += 2;
       if (!u.boss && !this.bossPhase) {
