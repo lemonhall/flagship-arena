@@ -33,6 +33,8 @@ const ENDPOINT = process.env.ITCH_CDP || 'http://127.0.0.1:9223';
 const MODE = process.argv.includes('--dry-run') ? 'dry' : process.argv.includes('--submit') ? 'submit' : 'fill';
 const GAME_ID = (process.argv.find(argument => argument.startsWith('--game=')) || '').split('=')[1]
   || process.env.ITCH_GAME_ID || null;
+// --publish flips the project off its secret Draft URL onto the public store page.
+const PUBLISH = process.argv.includes('--publish');
 const ROOT = path.resolve('.');
 const OUT = path.join(ROOT, 'artifacts');
 fs.mkdirSync(OUT, { recursive: true });
@@ -155,7 +157,7 @@ try {
     // generative-AI output: the ships are modelled in Blender and the music is CC0.
     await setRadio('ai_disclosure[ai_generated]', 'no');
     await setRadio('game[community_type]', 'topic');
-    await setRadio('game[published]', 'draft');
+    await setRadio('game[published]', PUBLISH ? 'published' : 'draft');
 
     const values = await page.evaluate(() => ({
       title: document.querySelector('[name="game[title]"]')?.value,

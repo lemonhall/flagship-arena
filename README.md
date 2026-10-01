@@ -2,7 +2,7 @@
 
 独立的第三人称 3D 单机海战。Three.js + Vite，电脑和手机浏览器直接玩；运行不需要 Godot、RPG 或游戏服务器。与 `godot_world_voyage` 平级。
 
-在线游玩：<https://flagship-arena-web.lemonhall.me>（备用：<https://flagship-arena-web.vercel.app>）。生产桌面/手机模拟已验证船模加载、真实开炮与暂停。
+在线游玩：<https://lemonhall.itch.io/flagship-six-seas>（itch.io）｜<https://flagship-arena-web.lemonhall.me>（自有域名；备用 <https://flagship-arena-web.vercel.app>）。生产桌面/手机模拟已验证船模加载、真实开炮与暂停。
 
 ## 怎么玩
 
