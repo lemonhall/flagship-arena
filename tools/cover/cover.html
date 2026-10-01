@@ -3,31 +3,33 @@
 <head>
 <meta charset="utf-8" />
 <style>
-  /* itch.io cover image. Rendered at exactly 630x500 by tools/cover/render.mjs. */
+  /* itch.io cover image. Rendered at exactly 630x500 by tools/cover/render.mjs.
+     The game camera sits high, so a raw 1440x900 frame is mostly empty sky. The shot is
+     scaled up and pushed down instead, so sea and ships fill the frame. */
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html, body { width: 630px; height: 500px; overflow: hidden; }
   body { position: relative; background: #061923; font-family: 'Segoe UI', Arial, sans-serif; }
-  .shot { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 42%; }
+  .shot { position: absolute; left: 50%; top: 63%; width: 182%; height: auto; transform: translate(-50%, -50%); }
   .shade {
     position: absolute; inset: 0;
     background:
-      linear-gradient(180deg, rgba(6,25,35,.88) 0%, rgba(6,25,35,.28) 30%, rgba(6,25,35,.42) 55%, rgba(6,25,35,.97) 100%),
-      radial-gradient(120% 80% at 50% 45%, rgba(6,25,35,0) 40%, rgba(6,25,35,.75) 100%);
+      linear-gradient(180deg, rgba(6,25,35,.93) 0%, rgba(6,25,35,.30) 24%, rgba(6,25,35,.26) 58%, rgba(6,25,35,.97) 100%),
+      radial-gradient(125% 85% at 50% 48%, rgba(6,25,35,0) 36%, rgba(6,25,35,.82) 100%);
   }
-  .frame { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: space-between; padding: 24px 28px; }
+  .frame { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: space-between; padding: 22px 26px; }
   .top { display: flex; align-items: center; gap: 9px; }
-  .top img { width: 26px; height: 26px; }
-  .kicker { font-size: 11px; letter-spacing: .26em; color: #9fd7cd; font-weight: 700; }
-  .title { font-size: 58px; line-height: .9; font-weight: 800; color: #fff; letter-spacing: -.015em; text-shadow: 0 6px 30px rgba(0,0,0,.75); }
+  .top img { width: 25px; height: 25px; }
+  .kicker { font-size: 10.5px; letter-spacing: .25em; color: #9fd7cd; font-weight: 700; }
+  .title { font-size: 60px; line-height: .88; font-weight: 800; color: #fff; letter-spacing: -.018em; text-shadow: 0 6px 30px rgba(0,0,0,.8); }
   .title em { font-style: normal; color: #f0c877; }
-  .sub { margin-top: 9px; font-size: 17px; font-weight: 600; color: #d3e8e2; text-shadow: 0 2px 12px rgba(0,0,0,.8); }
+  .sub { margin-top: 10px; font-size: 16.5px; font-weight: 600; color: #d3e8e2; text-shadow: 0 2px 12px rgba(0,0,0,.85); }
   .bottom { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
-  .tags { font-size: 10.5px; letter-spacing: .16em; font-weight: 700; color: #8fb8b0; }
-  .play { flex: none; font-size: 12px; font-weight: 800; letter-spacing: .05em; color: #061923; background: #f0c877; padding: 8px 13px; border-radius: 999px; }
+  .tags { font-size: 10px; letter-spacing: .17em; font-weight: 700; color: #8fb8b0; }
+  .play { flex: none; font-size: 11.5px; font-weight: 800; letter-spacing: .05em; color: #061923; background: #f0c877; padding: 8px 13px; border-radius: 999px; }
 </style>
 </head>
 <body>
-  <img class="shot" src="../../artifacts/shots/09-boss-clean.png" alt="" />
+  <img class="shot" src="../../artifacts/shots/08-clean.png" alt="" />
   <div class="shade"></div>
   <div class="frame">
     <div class="top"><img src="../../public/icon.svg" alt="" /><span class="kicker">THIRD-PERSON NAVAL COMBAT</span></div>

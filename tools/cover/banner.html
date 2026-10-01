@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<style>
+  /* X header image. Rendered at 1500x500 by tools/cover/render-brand.mjs.
+     X crops headers differently per layout, so the brand block stays left-of-centre and the
+     outer 120px on each side carry nothing that matters. */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1500px; height: 500px; overflow: hidden; }
+  body { position: relative; background: #061923; font-family: 'Segoe UI', Arial, sans-serif; }
+  .shot { position: absolute; right: -40px; top: 54%; width: 74%; height: auto; transform: translateY(-50%); }
+  .shade {
+    position: absolute; inset: 0;
+    background:
+      linear-gradient(90deg, #061923 26%, rgba(6,25,35,.92) 46%, rgba(6,25,35,.42) 74%, rgba(6,25,35,.20) 100%),
+      linear-gradient(180deg, rgba(6,25,35,.55) 0%, rgba(6,25,35,.30) 45%, rgba(6,25,35,.80) 100%);
+  }
+  .frame { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; gap: 15px; padding-left: 120px; }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .brand img { width: 33px; height: 33px; }
+  .brand span { font-size: 12px; letter-spacing: .3em; font-weight: 700; color: #9fd7cd; }
+  h1 { font-size: 72px; line-height: .9; font-weight: 800; color: #fff; letter-spacing: -.02em; text-shadow: 0 6px 30px rgba(0,0,0,.7); }
+  h1 em { font-style: normal; color: #f0c877; }
+  p { font-size: 19px; font-weight: 600; color: #cfe6e0; text-shadow: 0 2px 12px rgba(0,0,0,.8); }
+</style>
+</head>
+<body>
+  <img class="shot" src="../../artifacts/shots/04-boss.png" alt="" />
+  <div class="shade"></div>
+  <div class="frame">
+    <div class="brand"><img src="../../public/icon.svg" alt="" /><span>THIRD-PERSON NAVAL COMBAT</span></div>
+    <h1>FLAGSHIP<br /><em>SIX SEAS</em></h1>
+    <p>Free in your browser · Six routes · Six pirate captains</p>
+  </div>
+</body>
+</html>
