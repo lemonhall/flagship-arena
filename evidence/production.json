@@ -1,0 +1,99 @@
+{
+  "url": "https://flagship-arena-web.lemonhall.me",
+  "checkedAt": "2026-09-20T10:48:41.048Z",
+  "devices": [
+    {
+      "device": "desktop Chrome",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "startButton": {
+        "x": 1164,
+        "y": 691,
+        "width": 128,
+        "height": 44
+      },
+      "status": 200,
+      "assets": {
+        "/assets/ships/repair.glb": 200,
+        "/assets/ships/brig.glb": 200,
+        "/assets/ships/ammo.glb": 200,
+        "/assets/ships/caravel.glb": 200,
+        "/audio/flagship_arena_bgm.mp3": 206
+      },
+      "errors": [],
+      "ammunition": "117 / 120",
+      "localProgress": {
+        "version": 2,
+        "cleared": 6,
+        "voyage": 1,
+        "voyageCleared": 6,
+        "migrationGrant": 48,
+        "rewards": {},
+        "training": {
+          "gunnery": 1,
+          "hull": 0,
+          "handling": 0
+        }
+      },
+      "progressUploads": [],
+      "music": {
+        "duration": 171.999979,
+        "loop": true,
+        "error": null,
+        "savedVolume": 0.25,
+        "savedEnabled": false
+      }
+    },
+    {
+      "device": "mobile Chrome emulation",
+      "viewport": {
+        "width": 390,
+        "height": 667
+      },
+      "startButton": {
+        "x": 252,
+        "y": 545.796875,
+        "width": 104,
+        "height": 39
+      },
+      "status": 200,
+      "assets": {
+        "/assets/ships/ammo.glb": 200,
+        "/assets/ships/repair.glb": 200,
+        "/assets/ships/caravel.glb": 200,
+        "/assets/ships/brig.glb": 200,
+        "/audio/flagship_arena_bgm.mp3": 206
+      },
+      "errors": [],
+      "ammunition": "116 / 120",
+      "localProgress": {
+        "version": 2,
+        "cleared": 0,
+        "voyage": 1,
+        "voyageCleared": 0,
+        "migrationGrant": 0,
+        "rewards": {},
+        "training": {
+          "gunnery": 0,
+          "hull": 0,
+          "handling": 0
+        }
+      },
+      "progressUploads": [],
+      "music": {
+        "duration": 171.999979,
+        "loop": true,
+        "error": null,
+        "savedVolume": 0.25,
+        "savedEnabled": false
+      }
+    }
+  ],
+  "mobileRapidFire": {
+    "touchEvents": 26,
+    "scale": 1,
+    "defaultsPrevented": true
+  }
+}

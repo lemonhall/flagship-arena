@@ -1,0 +1,56 @@
+{
+  "ammo": {
+    "asset": "assets/ships/ammo.glb",
+    "source": "godot_world_voyage/scripts/flagship_pickup.gd",
+    "bytes": 23656,
+    "compression": "EXT_meshopt_compression"
+  },
+  "brig": {
+    "asset": "assets/ships/brig.glb",
+    "source": "godot_world_voyage/scripts/ship_visual.gd",
+    "bytes": 738196,
+    "compression": "EXT_meshopt_compression"
+  },
+  "caravel": {
+    "asset": "assets/ships/caravel.glb",
+    "source": "godot_world_voyage/scripts/ship_visual.gd",
+    "bytes": 703256,
+    "compression": "EXT_meshopt_compression"
+  },
+  "frigate": {
+    "asset": "assets/ships/frigate.glb",
+    "source": "godot_world_voyage/scripts/ship_visual.gd",
+    "bytes": 838280,
+    "compression": "EXT_meshopt_compression"
+  },
+  "galleon": {
+    "asset": "assets/ships/galleon.glb",
+    "source": "godot_world_voyage/scripts/ship_visual.gd",
+    "bytes": 833888,
+    "compression": "EXT_meshopt_compression"
+  },
+  "repair": {
+    "asset": "assets/ships/repair.glb",
+    "source": "godot_world_voyage/scripts/flagship_pickup.gd",
+    "bytes": 44480,
+    "compression": "EXT_meshopt_compression"
+  },
+  "ship_of_line": {
+    "asset": "assets/ships/ship_of_line.glb",
+    "source": "godot_world_voyage/scripts/ship_visual.gd",
+    "bytes": 946856,
+    "compression": "EXT_meshopt_compression"
+  },
+  "xebec": {
+    "asset": "assets/ships/xebec.glb",
+    "source": "godot_world_voyage/scripts/ship_visual.gd",
+    "bytes": 776324,
+    "compression": "EXT_meshopt_compression"
+  },
+  "zhenghe_baochuan": {
+    "asset": "assets/ships/zhenghe_baochuan.glb",
+    "source": "godot_world_voyage/scripts/ship_visual.gd",
+    "bytes": 1443496,
+    "compression": "EXT_meshopt_compression"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "旗舰突击",
+  "short_name": "旗舰突击",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#061923",
+  "theme_color": "#061923",
+  "icons": [{"src":"/icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any"}]
+}
